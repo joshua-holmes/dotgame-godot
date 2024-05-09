@@ -1,15 +1,23 @@
-[gd_scene load_steps=3 format=3 uid="uid://dvlunsb4dahsc"]
+[gd_scene load_steps=2 format=3 uid="uid://dvlunsb4dahsc"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_i0krj"]
-
-[sub_resource type="MeshTexture" id="MeshTexture_u5mrl"]
+[ext_resource type="PackedScene" uid="uid://lcg84gby78mp" path="res://wall.tscn" id="1_776wl"]
 
 [node name="Node2D" type="Node2D"]
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="Wall" parent="." instance=ExtResource("1_776wl")]
+position = Vector2(575, 10)
+scale = Vector2(57.645, 1)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-shape = SubResource("RectangleShape2D_i0krj")
+[node name="Wall2" parent="." instance=ExtResource("1_776wl")]
+position = Vector2(575, 638)
+scale = Vector2(57.645, 1)
 
-[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
-texture = SubResource("MeshTexture_u5mrl")
+[node name="Wall3" parent="." instance=ExtResource("1_776wl")]
+position = Vector2(9, 323)
+rotation = 1.5708
+scale = Vector2(32.215, 1)
+
+[node name="Wall4" parent="." instance=ExtResource("1_776wl")]
+position = Vector2(1142, 324)
+rotation = 1.5708
+scale = Vector2(32.215, 1)
