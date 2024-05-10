@@ -1,4 +1,4 @@
-extends Node2D
+extends Area2D
 
 
 # Called when the node enters the scene tree for the first time.
@@ -8,10 +8,8 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	var dot = load("res://dot.tscn").instantiate()
-	print("POS ", dot.transform)
-	dot.transform.origin = Vector2(300, 100)
-	add_child(dot)
-	
-	print("HERE ", dot)
-	
+	pass
+
+
+func _on_body_entered(body: RigidBody2D):
+	body.apply_central_impulse(-(body.linear_velocity * 2))

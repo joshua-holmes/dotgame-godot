@@ -1,4 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://dr3b8dro37xv8"]
+[gd_scene load_steps=4 format=3 uid="uid://dr3b8dro37xv8"]
+
+[ext_resource type="Script" path="res://scripts/dot.gd" id="1_x7bvd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g77yl"]
 
@@ -6,6 +8,7 @@
 size = Vector2(20, 20)
 
 [node name="dot" type="RigidBody2D"]
+script = ExtResource("1_x7bvd")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_g77yl")
